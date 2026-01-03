@@ -26,7 +26,7 @@ body {
 
   position: relative; /* for positioning of everything inside the hero */
 
-  background-image: url(./Images/background_2.jpg);
+  background-image: url(./Images/backgr.jpg);
   background-size: cover; /* image fills the hero with no stretching and no distortion */
   background-position: center; /* center of the image stays in the center of the hero. Image includes coffee cup that is the emotional anchor */
   background-repeat: no-repeat; /* no tiling of the image */
@@ -63,20 +63,29 @@ body {
 .nav {
   width: 90%; /* nav not full width, leaves space on sides for breathing room */
 
-  margin: 1.5rem auto 0 auto;
+  margin: 1.5rem auto 0 auto; /* center the nav */
   padding: 0.6rem 1.5rem; /* give the nav some breathing room */
 
   display: flex; /* lets the logo and links live on the same line */
   align-items: center;
   justify-content: center; /* center the nav content */
-  gap: 3rem;
+  gap: 3rem; /* space between logo and links */
 
   position: relative;
   top: auto;
   left: auto;
 
-  background-color: #00df81;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
   border-radius: 999px;
+
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
 
   z-index: 2; /* ensures nav stays above overlay */
 }
@@ -97,12 +106,17 @@ body {
 }
 
 .nav a {
-  color: rgb(2, 27, 26);
-  text-decoration: none;
+  color: #f5f7f6;
+  text-decoration: none; /* removes underline from links */
   font-size: 0.95rem;
   letter-spacing: 0.03rem;
   font-weight: 600;
   line-height: 1;
+  transition: color 0.3s ease-in;
+}
+
+.nav a:hover {
+  color: #00df81;
 }
 
 .logo img {
@@ -119,6 +133,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center; /* centers the story vertically - calm, grounded, intentional */
+  transform: translateY(-6rem);
 
   padding-top: 4rem; /* creates nav clearance */
   padding-left: 6rem; /* texts slightly left of center, not sticking to the edge */
