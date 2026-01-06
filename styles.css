@@ -66,20 +66,20 @@ body {
 
 /* styling of the nav */
 .nav {
-  width: max-content; /* nav not full width, leaves space on sides for breathing room */
+  width: 70%; /* nav not full width, leaves space on sides for breathing room */
 
   margin: 1.5rem auto 0 auto; /* center the nav */
-  padding: 0.6rem 1.5rem; /* give the nav some breathing room */
+  padding: 0.6rem 2rem; /* give the nav some breathing room */
 
   display: flex; /* lets the logo and links live on the same line */
   align-items: center;
   justify-content: center; /* center the nav content */
-  gap: 3rem; /* space between logo and links */
+  gap: 2rem; /* space between logo and links */
 
   position: relative;
-  z-index: 5;
-  top: auto;
-  left: auto;
+  z-index: 10;
+  /* top: auto;
+  left: auto; */
 
   background: linear-gradient(
     135deg,
@@ -129,16 +129,21 @@ body {
 .logo img {
   display: block;
   opacity: 0.9;
-  width: 36px;
-  height: 36px;
+  width: 50px;
+  height: 50px;
   /* margin-right: 1rem; */
   filter: invert(1);
 }
 
 .logo {
-  display: inline-flex; /* ensures link box wraps the image */
+  position: absolute;
+  margin-top: 0.3rem;
+  left: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
   align-items: center;
   cursor: pointer;
+  z-index: 11;
 }
 
 .hero-content {
@@ -147,7 +152,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center; /* centers the story vertically - calm, grounded, intentional */
-  transform: translateY(-4rem);
+  /* transform: translateY(-4rem); */
+  margin-bottom: 8rem;
   z-index: 2;
 
   padding-top: 4rem; /* creates nav clearance */
