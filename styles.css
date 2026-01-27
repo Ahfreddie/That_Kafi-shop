@@ -54,8 +54,6 @@ body {
 
   pointer-events: none; /* allows clicks to pass through the overlay */
   z-index: 1;
-
-  outline: 2px solid red;
 }
 
 /* bring the content above the overlay so text and nav stay clickable */
@@ -66,14 +64,14 @@ body {
 
 /* styling of the nav */
 .nav {
-  width: 70%; /* nav not full width, leaves space on sides for breathing room */
+  width: 90%; /* nav not full width, leaves space on sides for breathing room */
 
   margin: 1.5rem auto 0 auto; /* center the nav */
   padding: 0.6rem 2rem; /* give the nav some breathing room */
 
   display: flex; /* lets the logo and links live on the same line */
   align-items: center;
-  justify-content: center; /* center the nav content */
+  justify-content: space-around; /* center the nav content */
   gap: 2rem; /* space between logo and links */
 
   position: relative;
@@ -86,7 +84,7 @@ body {
     rgba(255, 255, 255, 0.1),
     rgba(255, 255, 255, 0)
   );
-  border-radius: 999px;
+  border-radius: 20px;
   /* for the glass effect to work */
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.25);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -129,22 +127,12 @@ body {
 .logo img {
   display: block;
   opacity: 0.9;
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
   /* margin-right: 1rem; */
   filter: invert(1);
 }
 
-.logo {
-  position: absolute;
-  margin-top: 0.3rem;
-  left: 2.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  align-items: center;
-  cursor: pointer;
-  z-index: 11;
-}
 
 .hero-content {
   flex: 1; /* takes the remaining height after nav */
@@ -162,3 +150,4 @@ body {
 
   max-width: 700px; /* keeps the text from stretching too wide on large screens */
 }
+
